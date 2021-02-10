@@ -1,0 +1,6 @@
+
+template_type: TF
+
+tags:
+- pcs-config:tf12_gcp
+
