@@ -1,6 +1,6 @@
 resource "google_container_cluster" "primary" {
   provider = google
-  name = "my-gke-cluster"
+  name = "my-gke-cluster66"
   location = "us-central1"
   initial_node_count = 1
   // GCP Kubernetes Engine Clusters have Legacy Authorization enabled
