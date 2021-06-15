@@ -9,6 +9,6 @@ workflows:
           prisma_cloud_api_url: $prisma_cloud_api_url
           prisma_cloud_asset_name: $CIRCLE_PROJECT_REPONAME
           prisma_cloud_failure_criteria: 'High:1, Medium:1, Low:1, Operator:OR'
-          prisma_cloud_repo_dir: ./scan
+          prisma_cloud_repo_dir: ./gcp_all_issues
           prisma_cloud_secret_key: prisma_cloud_secret_key
           prisma_cloud_tags: 'env:development, team:DevOps'
