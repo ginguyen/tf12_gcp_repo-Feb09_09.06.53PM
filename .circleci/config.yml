@@ -1,0 +1,14 @@
+orbs:
+  pcs: prisma_cloud/devops_security@3.0.0
+version: 2.1
+workflows:
+  scan:
+    jobs:
+      - pcs/scan_iac:
+          prisma_cloud_access_key: $prisma_cloud_access_key_stage
+          prisma_cloud_api_url: https://api-stage.prismacloud.io
+          prisma_cloud_asset_name: $CIRCLE_PROJECT_REPONAME
+          prisma_cloud_failure_criteria: 'High:1, Medium:1, Low:1, Operator:OR'
+          prisma_cloud_repo_dir: ./gcp_all_issues
+          prisma_cloud_secret_key: prisma_cloud_secret_key_stage
+          prisma_cloud_tags: 'env:development, team:DevOps'
